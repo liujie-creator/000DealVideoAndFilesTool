@@ -3,7 +3,7 @@ import CF
 import os
 
 if  __name__ == '__main__':
-    fn1 = FN.FN('G:\E\SpeedPan\Java教学系列视频教程孔浩')
+    fn1 = FN.FN(r'D:\0COCO\System\桌面\SpeedPan\C++ Primer视频教程（初级中级高级）')
     fn1.analyzeExtensions()
     d = fn1.filesNum
     d = sorted(d.items(), key=lambda item:item[1], reverse=True)
