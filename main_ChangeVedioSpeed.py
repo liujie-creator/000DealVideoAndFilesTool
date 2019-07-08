@@ -1,7 +1,7 @@
 from CV import CV
 
 if  __name__ == '__main__':
-    d = r'\\10.6.32.1\DShared\Cocos2dx游戏开发工程师'
+    d = r'\\10.6.32.1\DShared\Cocos2d 从入门到精通'
     cv1 = CV(workDir=d, sleepTime=6)
     #speed = 1
     # speed = 1.1
