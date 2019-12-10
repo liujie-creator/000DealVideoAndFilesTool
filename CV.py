@@ -77,16 +77,16 @@ class CV:
                     new_i_d = new_i
                     new_i = '\"' + new_i + '\"'
                     print('正在执行：', c, '/', cn, ' ', i, '-->', new_i, ' 请稍后。。。', sep='')
-                    if(gpu):
-                        if(speed != 1):
-                                cmd = 'ffmpeg -loglevel quiet -threads 8 -i ' + i + ' -threads 8 -filter_complex "[0:v]setpts=' + str(vSpeed) + '*PTS[v];[0:a]atempo=' + str(aSpeed) + '[a]" -map "[v]" -map "[a]" ' + new_i
-                        else:
-                                cmd = 'ffmpeg -loglevel quiet -i ' + i + ' ' + new_i
+                    # if(gpu):
+                        # if(speed != 1):
+                    # cmd = 'ffmpeg -loglevel quiet -threads 8 -i ' + i + ' -threads 8 -filter_complex "[0:v]setpts=' + str(vSpeed) + '*PTS[v];[0:a]atempo=' + str(aSpeed) + '[a]" -map "[v]" -map "[a]" ' + new_i
+                        # else:
+                        #         cmd = 'ffmpeg -loglevel quiet -i ' + i + ' ' + new_i
+                    # else:
+                    if(speed != 1):
+                        cmd = 'ffmpeg -loglevel quiet -threads ' + str(threads) + ' -i ' + i + ' -threads ' + str(threads) + ' -filter_complex "[0:v]setpts=' + str(vSpeed) + '*PTS[v];[0:a]atempo=' + str(aSpeed) + '[a]" -map "[v]" -map "[a]" ' + new_i
                     else:
-                        if(speed != 1):
-                                cmd = 'ffmpeg -loglevel quiet -threads ' + str(threads) + ' -i ' + i + ' -threads ' + str(threads) + ' -filter_complex "[0:v]setpts=' + str(vSpeed) + '*PTS[v];[0:a]atempo=' + str(aSpeed) + '[a]" -map "[v]" -map "[a]" ' + new_i
-                        else:
-                                cmd = 'ffmpeg -loglevel quiet -i ' + i + ' ' + new_i
+                        cmd = 'ffmpeg -loglevel quiet -i ' + i + ' ' + new_i
                     #print(cmd)
                     os.system(cmd)
                     LETime = datetime.datetime.now()
