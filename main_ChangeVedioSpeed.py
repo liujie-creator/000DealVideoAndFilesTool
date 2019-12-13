@@ -15,14 +15,4 @@ if  __name__ == '__main__':
     dealOldFilesMode = 0
     gpu = False
     cv1.dealV(speed, dealOldFilesMode, gpu, 8)
-    #cv1.dealV(speed = 2, dealOldFilesMode=1)
-    
-    #cv1.dealV(speed = 1.8, dealOldFilesMode=1)
-    #cv1.dealV(speed = 1.6, dealOldFilesMode = 1)
-    #cv1.dealV(speed = 1.5)
-    #cv1.dealV(speed = 1.3, dealOldFilesMode = 1)
-    #cv1.dealV(speed = 1.2, dealOldFilesMode = 1)
-    #cv1.dealV(speed = 1, dealOldFilesMode=1)
-    #print(os.getcwd())
-    #print(sys.path[0])
     pass
